@@ -1,0 +1,32 @@
+{
+    "name": "nduflot/2021-07-19-php-poo",
+    "description": "Composer pour la formation Php POO CFA Lille Paris Nantes Toulouse",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Duflot",
+            "email": "nduflot@dawan.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twbs/bootstrap": "^5.0",
+        "doctrine/collections": "^1.6",
+        "php-kit/ext-pdo": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/Classe",
+            "Game\\": "src/Jdr",
+            "Factory\\": "src/Factory",
+            "Interfaces\\": "src/Interfaces"
+        }
+    },
+    "_comments": "Ce qui suit va lancer l'exécution d'un script si et seulement si la dépendance twbs est installée",
+    "scripts": {
+        "post-update-cmd": [
+            "@php scripts/script.php"
+        ]
+    }
+}
